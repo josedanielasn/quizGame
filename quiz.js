@@ -3,7 +3,8 @@ const start = main.querySelector('.start');
 const end = main.querySelector('.end');
 
 var set = []
-var gameplay = true;
+// var gameplay = true;
+var score = 0;
 list_questions();
 startGame();
 
@@ -19,6 +20,8 @@ function person(question, choices, answer) {
     // console.log(answer);
     if (answer == correct_num){
       console.log('Your answer is CORRECT!');
+      score = score + 1;
+      console.log('Your score is now = ' + score)
       if (set.length  === 0 ){
         console.log("Congratulations, you finished the quiz.");
       } else{
@@ -58,7 +61,7 @@ function list_questions() {
   let num_3 = new person(
     // 3,
     'What is the 7th element on the periodic table of elements?',
-    ['Nitogen', 'Oxygen', 'Carbon', 'Helium'],
+    ['Nitrogen', 'Oxygen', 'Carbon', 'Helium'],
     'Nitrogen'
   );
   let num_4 = new person(
@@ -96,9 +99,8 @@ function list_questions() {
 }
 
 function gen_question() {
-  // let question_number = Math.floor(Math.random() * 8) + 1;
   var question_number = set[Math.floor(Math.random() * set.length)];
-  set.splice(question_number,1)
+  set.splice(set.indexOf(question_number),1)
   console.log(question_number.question);
   console.log(set.length);
   question_number.choices.forEach(function (set, index) {
@@ -114,10 +116,10 @@ end.addEventListener('click',function(){
 function startGame() {
 
 start.addEventListener('click', function () {
-  if (gameplay === true){
+  // if (gameplay === true){
   console.log('start');
   gen_question();
-  gameplay = false
+  // gameplay = false
   }
-});
+);
 }
