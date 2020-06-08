@@ -2,9 +2,9 @@ const main = document.querySelector('.container');
 const start = main.querySelector('.start');
 const end = main.querySelector('.end');
 
-var set = [];
+let set = [];
 // var gameplay = true;
-var score = 0;
+let score = 0;
 list_questions();
 startGame();
 
@@ -12,29 +12,6 @@ function questions(question, choices, answer) {
   this.question = question;
   this.choices = choices;
   this.answer = answer;
-  this.select = function () {
-    let answer = window.prompt('Number corresponding to your answer:');
-    // if (1 === this.choices.indexof){}
-    let correct_num = this.choices.indexOf(this.answer) + 1;
-    // console.log(answer);
-    if (answer == correct_num) {
-      console.log('Your answer is CORRECT!');
-      score = score + 1;
-      console.log('Your score is now = ' + score);
-      if (set.length === 0) {
-        console.log('Congratulations, you finished the quiz.');
-      } else {
-        gen_question();
-      }
-    } else if (set.length !== correct_num) {
-      console.log('Your answer is WRONG.');
-      if (set.length === 0) {
-        console.log('Congratulations, you finished the quiz.');
-      } else {
-        gen_question();
-      }
-    }
-  };
 }
 
 questions.prototype.select = function () {
