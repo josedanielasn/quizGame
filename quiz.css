@@ -1,19 +1,65 @@
-.container {
-  background-color: rgb(186, 235, 218);
-  border-radius: 10px;
-  border: solid rgb(84, 126, 100);
-  margin: 200px auto;
-  padding: 20px auto;
-  width: 400px;
-  height: 200px;
-  display: flex;
-  flex-flow: column;
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-image: url(space.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.container span {
-  font-size: 2em;
+.container {
+  background-color: rgb(27, 32, 73);
+  border-radius: 10px;
+  border: solid rgb(6, 9, 29);
+  margin: 150px auto;
+  padding: 20px auto;
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  opacity: 90%;
+}
+
+.title {
+  color: #aaa9ad;
+  font-weight: 900;
+  text-shadow: #8b8f8a 1px 1px;
+  font-size: 2.3em;
   display: block;
   margin: 20px auto;
+}
+
+.score {
+  display: flex;
+  flex-flow: row;
+  display: none;
+  margin: 20px auto;
+  font-size: 1.3em;
+}
+
+.question {
+  margin: 0 220px 0 25px;
+  font-weight: 800;
+  color: #aaa9ad;
+  display: inline-block;
+}
+
+.progress {
+  border-radius: 5px;
+  background-color: grey;
+  height: 5px;
+  /* width: 160px; */
+  margin: 5px;
+}
+
+#score {
+  font-weight: 800;
+  display: inline-block;
+  color: #aaa9ad;
+}
+
+.score_number {
+  color: #296e01;
+  font-weight: 700;
+  font-size: 1.2em;
 }
 
 .container .button {
@@ -23,9 +69,108 @@
 }
 
 .button button {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   width: 100px;
   height: 30px;
-  margin: 20px;
+  margin: 20px 70px;
   border-radius: 10px;
   font-size: 1em;
+  box-shadow: rgb(104, 103, 103) 0 4px;
+  outline: none;
+}
+
+.button button:active {
+  box-shadow: rgb(39, 39, 39) 1.5px 1.5px;
+}
+
+.button button:hover {
+  box-shadow: rgb(39, 39, 39) 1.5px 1.5px;
+  background-color: rgb(146, 143, 143);
+}
+
+.freeze {
+  background-color: rgb(146, 143, 143);
+  color: white;
+  box-shadow: rgb(68, 68, 68) 2.5px 2.5px;
+}
+
+.display_question {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  height: auto;
+  width: 90%;
+}
+
+.display_question span {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 1.8em;
+}
+
+.display_question span {
+  display: block;
+  margin-bottom: 20px;
+  color: #aaa9ad;
+  font-weight: 700;
+}
+
+.display_question button {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  font-weight: 700;
+  width: 45%;
+  height: 40px;
+  box-shadow: rgb(104, 103, 103) 0 4px;
+  outline: none;
+}
+
+.display_question button:hover {
+  border: solid rgb(56, 55, 55);
+}
+
+.display_question button:active {
+  box-shadow: rgb(54, 54, 54) 1.5px 1.5px;
+}
+
+/* Accessible in Javascript */
+
+.startJ {
+  display: none;
+}
+
+.end {
+  display: none;
+}
+
+.next {
+  display: none;
+}
+
+.scoreJ {
+  display: block;
+}
+
+.titleJ {
+  display: none;
+}
+
+.correct {
+  background-color: rgb(79, 224, 173);
+}
+
+.wrong {
+  background-color: rgb(235, 131, 34);
+}
+
+.winning {
+  color: #296e01;
+  text-shadow: #496838 1px 1px;
+  font-size: 2.5em;
+  text-align: center;
 }
